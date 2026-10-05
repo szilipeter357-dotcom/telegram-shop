@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: #000;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: #f4f3ef;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.telegram-app {
+  min-height: 100vh;
+  background: #000;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 520px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 105px;
+  background: #20243d;
+  overflow-x: hidden;
+}
+
+/* FEJLÉC */
+
+.telegram-header {
+  position: relative;
+  height: 143px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 42px 27px 0;
+  background: #20243d;
+  border-radius: 0 0 24px 24px;
+}
+
+.close-button {
+  background: transparent;
+  color: white;
+  font-size: 17px;
+}
+
+.telegram-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.brand-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+  color: #aeb0bd;
+  font-size: 15px;
+}
+
+.telegram-more {
+  width: 42px;
+  height: 42px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+/* EGYENLEG */
+
+.balance-panel {
+  min-height: 101px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 27px 17px;
+  background: #20243d;
+  border-bottom: 1px solid rgba(130, 215, 105, 0.8);
+  box-shadow:
+    0 7px 25px rgba(126, 211, 104, 0.42);
+}
+
+.balance-label {
+  font-size: 17px;
+}
+
+.balance-number {
+  color: #e1b86f;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.balance-number span {
+  margin-left: 4px;
+  font-size: 18px;
+}
+
+.brand-logo {
+  color: #9b9b72;
+  font-size: 46px;
+}
+
+/* TARTALOM */
+
+.home-content {
+  padding-top: 61px;
+}
+
+/* BANNER */
+
+.hero-wrapper {
+  position: relative;
+  margin: 0 31px;
+}
+
+.hero-banner {
+  position: relative;
+  height: 423px;
+  overflow: hidden;
+  border-radius: 21px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      #536d48 0%,
+      #35443a 27%,
+      #121626 68%,
+      #0d111f 100%
+    );
+
+  box-shadow:
+    0 0 27px rgba(126, 211, 104, 0.43);
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+
+  background:
+    repeating-linear-gradient(
+      75deg,
+      transparent 0 45px,
+      rgba(88, 113, 74, 0.18) 46px 52px,
+      transparent 53px 95px
+    );
+
+  transform: rotate(-12deg);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+
+  width: 220px;
+  height: 510px;
+
+  right: -100px;
+  top: -20px;
+
+  border: 9px solid rgba(180, 140, 78, 0.32);
+  border-radius: 50%;
+
+  transform: rotate(23deg);
+}
+
+.hero-text {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 48%;
+  text-align: center;
+  font-size: 29px;
+  font-weight: 300;
+  text-shadow: 0 2px 5px #000;
+}
+
+.hero-location {
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+.hero-arrow {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  width: 34px;
+  height: 54px;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 36px;
+}
+
+.hero-left {
+  left: -8px;
+}
+
+.hero-right {
+  right: -8px;
+}
+
+/* PONTOK */
+
+.slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 25px 0 42px;
+}
+
+.slider-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #31549f;
+}
+
+.slider-dot-active {
+  width: 64px;
+  border-radius: 20px;
+  background: #3e7cff;
+}
+
+/* MENÜ */
+
+.main-menu-button {
+  width: calc(100% - 62px);
+  height: 98px;
+  margin: 0 31px 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+
+  border-radius: 21px;
+
+  background: #d2ad73;
+  color: white;
+
+  font-size: 30px;
+  font-weight: 400;
+
+  box-shadow:
+    0 5px 0 rgba(92, 69, 33, 0.25);
+}
+
+.menu-symbol {
+  font-size: 38px;
+}
+
+/* WHEEL */
+
+.wheel-panel {
+  position: relative;
+  height: 255px;
+  margin: 0 31px 43px;
+  overflow: hidden;
+  border-radius: 21px;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #526a47,
+      #28362f 38%,
+      #0d1220 77%
+    );
+
+  box-shadow:
+    0 0 28px rgba(126, 211, 104, 0.43);
+}
+
+.wheel-panel::before {
+  content: "";
+  position: absolute;
+  inset: -80px;
+
+  background:
+    repeating-conic-gradient(
+      rgba(105, 141, 78, 0.12) 0deg 13deg,
+      transparent 13deg 28deg
+    );
+
+  border-radius: 50%;
+}
+
+.wheel-heading {
+  position: relative;
+  z-index: 2;
+
+  margin: 43px 0 0 61px;
+
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.wheel-row {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  margin: 24px 48px 0 61px;
+}
+
+.wheel-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.wheel-icon {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    #fff,
+    #d6d6d6
+  );
+
+  box-shadow:
+    0 5px 12px rgba(0,0,0,.3);
+
+  font-size: 42px;
+}
+
+.wheel-open {
+  min-width: 235px;
+  height: 66px;
+  margin-left: auto;
+
+  border-radius: 14px;
+
+  background: #d3ad72;
+
+  color: white;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  text-decoration: underline;
+
+  box-shadow:
+    0 6px 0 rgba(91,67,30,.4);
+}
+
+/* INFORMÁCIÓ */
+
+.information-panel {
+  position: relative;
+
+  min-height: 340px;
+
+  margin: 0 31px 38px;
+
+  overflow: hidden;
+
+  border-radius: 21px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #506846,
+      #27352e 35%,
+      #0e1322 80%
+    );
+
+  box-shadow:
+    0 0 27px rgba(126, 211, 104, 0.38);
+}
+
+.information-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 15%,
+      rgba(0,0,0,.48) 100%
+    );
+}
+
+.information-text {
+  position: relative;
+  z-index: 2;
+
+  padding: 68px 15px 30px;
+
+  text-align: center;
+}
+
+.information-title {
+  font-size: 23px;
+}
+
+.information-needed {
+  margin-top: 26px;
+  font-size: 24px;
+}
+
+.information-role {
+  margin-top: 5px;
+  font-size: 24px;
+}
+
+.information-bottom {
+  margin-top: 27px;
+  font-size: 20px;
+}
+
+.support-link {
+  margin-top: 5px;
+
+  background: transparent;
+
+  color: #43e2df;
+
+  font-size: 20px;
+
+  text-decoration: underline;
+}
+
+/* AJÁNLAT */
+
+.offer {
+  padding: 0 31px 50px;
+}
+
+.offer h2 {
+  color: #dcb272;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.offer-message {
+  padding: 32px 10px;
+  text-align: center;
+
+  color: #dddde3;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* OLDALAK */
+
+.inner-page {
+  min-height: 700px;
+  padding: 35px 31px;
+}
+
+.back-button {
+  margin-bottom: 25px;
+  background: transparent;
+  color: #dcb272;
+  font-size: 16px;
+}
+
+.inner-page h1 {
+  font-size: 31px;
+  font-weight: 500;
+}
+
+.inner-page h2 {
+  margin: 30px 0 14px;
+  font-size: 22px;
+}
+
+.menu-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 58px;
+  margin-top: 25px;
+  padding: 0 17px;
+
+  border-radius: 15px;
+
+  background: #20253f;
+  border: 1px solid rgba(130,215,105,.3);
+}
+
+.menu-search input {
+  flex: 1;
+  outline: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 15px;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.region-button {
+  min-height: 60px;
+  border-radius: 15px;
+
+  background: #20253f;
+
+  border: 1px solid rgba(130,215,105,.25);
+
+  color: white;
+  font-size: 15px;
+}
+
+/* ALSÓ MENÜ */
+
+.bottom-nav {
+  position: fixed;
+  z-index: 100;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: min(520px,100%);
+  height: 108px;
+
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+
+  padding: 10px 5px 12px;
+
+  background: #20243d;
+
+  border-radius: 24px 24px 0 0;
+
+  box-shadow:
+    0 -5px 25px rgba(126,211,104,.14);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: transparent;
+
+  color: #d6aa69;
+}
+
+.bottom-nav-item span {
+  font-size: 37px;
+  line-height: 1;
+}
+
+.bottom-nav-item small {
+  font-size: 16px;
+}
+
+.bottom-nav-item.active {
+  color: #e6bd79;
+}
+
+/* TELEFON */
+
+@media (max-width: 430px) {
+
+  .home-content {
+    padding-top: 61px;
+  }
+
+  .hero-banner {
+    height: 423px;
+  }
+
+  .wheel-row {
+    margin-left: 35px;
+    margin-right: 25px;
+  }
+
+  .wheel-icons {
+    gap: 9px;
+  }
+
+  .wheel-icon {
+    width: 62px;
+    height: 62px;
+    font-size: 31px;
+  }
+
+  .wheel-open {
+    min-width: 145px;
+    height: 57px;
+    font-size: 15px;
+  }
+
+  .wheel-heading {
+    margin-left: 40px;
+    font-size: 31px;
+  }
+
+  .information-title {
+    font-size: 21px;
+  }
+
+  .information-needed,
+  .information-role {
+    font-size: 22px;
+  }
+
+  .bottom-nav-item span {
+    font-size: 32px;
+  }
+
+  .bottom-nav-item small {
+    font-size: 14px;
+  }
+}
